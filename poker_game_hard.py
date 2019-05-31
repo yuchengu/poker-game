@@ -253,8 +253,8 @@ class Game():
 			self.play[player] = self.store.score()
 			# Get the mapping of the players with the type of hands
 			self.type[player] = self.store.hand_name()
-		print(self.play)
-		print(self.match)
+		# print(self.play)
+		# print(self.match)
 	def play_game(self):
 		max_s = max(self.play.values())
 		max_p = []
@@ -265,8 +265,7 @@ class Game():
 			winner = max_p[0]
 			print("The winner is {} with the hand of {}, which {}."\
 						.format(winner, self.match[winner], self.type[winner]))
-		# elif len(max_p) == self.number_of_players:
-		# 	print('It is a tie.')
+
 		else:
 			for key, value in self.play.items():
 				if key not in max_p:
